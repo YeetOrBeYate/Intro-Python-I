@@ -19,4 +19,12 @@ print(string + z)
 
 # Use the 'format' string method to print the same thing
 
+formatString = "x is {xnum}, y is {ynum}, z is {zString}"
+
+print(formatString.format(xnum = x, ynum = y,zString= z))
+
 # Finally, print the same thing using an f-string
+
+f_string = f"x is {x}, y is {y}, z is {z}"
+
+print(f_string)
