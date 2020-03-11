@@ -30,3 +30,18 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
+
+
+currentDate = datetime.now()
+
+yeet = calendar.TextCalendar(firstweekday=6)
+
+
+if len(sys.argv) == 1:
+    print(yeet.formatmonth(currentDate.year, currentDate.month))
+elif len(sys.argv) == 2:
+    print(yeet.formatmonth(currentDate.year, int(sys.argv[1])))
+elif len(sys.argv) == 3:
+    print(yeet.formatmonth(int(sys.argv[2]), int(sys.argv[1])))
+else:
+    print("add the month and then year separated by spaces")
